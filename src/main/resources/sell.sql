@@ -6,6 +6,7 @@ create table product_info(
                                            product_description varchar(64) comment '商品描述',
                                            product_icon varchar(512) comment '商品小图片',
                                            category_type int not null comment '商品类目编号',
+                                           product_status tinyint(3) default '0' comment '商品状态，0 表示商品正常出售，1 表示商品下架',
                                            create_time timestamp not null default current_timestamp comment '商品创建时间',
                                            update_time timestamp not null default current_timestamp on update current_timestamp comment '商品更新时间',
                                            primary key (product_id)

@@ -36,7 +36,8 @@ public class ProductCategoryRepositoryTest {
 //        ProductCategory productCategory = new ProductCategory();
 //        productCategory.setCategoryName("打折");
 //        productCategory.setCategoryType(6);
-        ProductCategory productCategory = new ProductCategory("双11打折",10);
+        ProductCategory productCategory = new ProductCategory("双11打折",11);
+//        productCategory.setCategoryId(0);
         ProductCategory result = repository.save(productCategory);
 //        Assert.assertNotEquals(null,result);
         Assert.assertNotNull(result);
@@ -45,7 +46,7 @@ public class ProductCategoryRepositoryTest {
     @Test
     @Transactional
     public void updateTest(){
-        ProductCategory productCategory = repository.findOne(10);
+        ProductCategory productCategory = repository.findOne(4);
         productCategory.setCategoryName("一折");
         productCategory.setCategoryType(12);
         repository.save(productCategory);
