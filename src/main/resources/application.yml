@@ -9,9 +9,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: root2
-    password: "015036"
-    url: jdbc:mysql://47.112.7.219:3306/sell?characterEncoding=UTF8&useSSL=false
+    username: root
+    password: "123456"
+    url: jdbc:mysql://192.168.13.133:3306/sell?characterEncoding=UTF8&useSSL=false
   jpa:
     show-sql: true
 #    database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -19,3 +19,4 @@ spring:
     default-property-inclusion: non_null
 server:
   context-path: /sell
+  port: 8081

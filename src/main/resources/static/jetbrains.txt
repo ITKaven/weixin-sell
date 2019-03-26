@@ -1,0 +1,5 @@
+shift enter 跳到下一行，不一定要在行尾
+ctrl shift u 变量字符（大写-->小写 或者 小写--> 大写）
+ctrl shift . 收起代码块
+ctrl alt l 自动格式化
+ctrl alt shift n 搜索类、文件等数据

@@ -26,8 +26,8 @@ public class ProductCategoryRepositoryTest {
     }
 
     @Test
-    @Transactional
-    /**
+//    @Transactional
+    /* *
      * 和事务注解 @Transactional 有不同
      * 事务注解 @Transactional ： 执行方法出现异常，执行回滚
      * 这个 @Transactional ：执行回滚
@@ -36,7 +36,7 @@ public class ProductCategoryRepositoryTest {
 //        ProductCategory productCategory = new ProductCategory();
 //        productCategory.setCategoryName("打折");
 //        productCategory.setCategoryType(6);
-        ProductCategory productCategory = new ProductCategory("双11打折",11);
+        ProductCategory productCategory = new ProductCategory("双11打折",12);
 //        productCategory.setCategoryId(0);
         ProductCategory result = repository.save(productCategory);
 //        Assert.assertNotEquals(null,result);
@@ -44,11 +44,11 @@ public class ProductCategoryRepositoryTest {
     }
 
     @Test
-    @Transactional
+//    @Transactional
     public void updateTest(){
-        ProductCategory productCategory = repository.findOne(4);
-        productCategory.setCategoryName("一折");
-        productCategory.setCategoryType(12);
+        ProductCategory productCategory = repository.findOne(1);
+        productCategory.setCategoryName("女生最爱");
+        productCategory.setCategoryType(11);
         repository.save(productCategory);
     }
 
